@@ -369,15 +369,89 @@ print(sorted(liste))
 Écrivez une fonction qui prenne deux listes en entrée et retourne l'intersection des deux listes (c'est-à-dire une liste contenant tous les éléments présents dans les deux listes).
 ```
 
-<div id="pad_4.2" class="pad"></div>
-<script>
-    Pythonpad('pad_4.2', 
-              {'id': '4.2', 
-               'title': 'Testez votre solution ici', 
-               'src': '# Complétez ce code'})
-</script>
 
-````{admonition} Solution
+Algo & Prog. Pyth G4
+À venir
+Génial, aucun devoir à remettre dans les jours qui viennent !
+
+Annoncez quelque chose à votre classe
+
+Post rédigé par HABIBALLAH ASMAA
+HABIBALLAH ASMAA
+Date de création : 11:5211:52
+def intersection(l1, l2):
+    l3 = []
+    seen = set()  # Utilisation d'un set pour suivre les éléments déjà ajoutés
+    for e in l1:
+        if e in l2 and e not in seen:  # Vérifie si l'élément est dans l2 et n'a pas encore été ajouté
+            l3.append(e)
+            seen.add(e)  # Marque l'élément comme ajouté
+    return l3
+
+l1 = [2, 4, 5, 2, 7, 6]
+l2 = [5, 8, 2, 3, 2]
+
+print("A inter B:", intersection(l1, l2))
+
+Ajouter un commentaire au cours…
+
+
+Post rédigé par ElYesri Inass
+ElYesri Inass
+Date de création : 11:5111:51
+def intersection(l1, l2):
+    l3 = []
+    for e in l1:
+        if e in l2 and e not in l3:
+            l3.append(e)
+    return l3
+
+l1 = [2, 4, 5, 2, 7, 6]
+l2 = [5, 8, 2, 3, 2]
+print("A inter B", intersection(l1, l2))
+
+Ajouter un commentaire au cours…
+
+
+Post rédigé par Younes HALIM
+Younes HALIM
+Date de création : 11:5111:51
+def intersection(l1, l2):
+    l3 = []
+    l2_copy = l2[:]  # Création d'une copie de l2 pour éviter de modifier l'original
+
+    for e in l1:
+        if e in l2_copy:  # Vérifier si e est présent dans l2_copy
+            l3.append(e)
+            l2_copy.remove(e)  # Supprimer une occurrence pour éviter les doublons excessifs
+
+    return l3
+
+l1 = [2, 4, 5, 2, 7, 6]
+l2 = [5, 8, 2, 3, 2]
+print("A inter B", intersection(l1, l2))
+
+Ajouter un commentaire au cours…
+
+
+```
+
+"def intersection(l1,l2): l3=[] for e in…"
+abderrahim larhlimi
+Date de création : 11:5011:50
+def intersection(l1,l2):
+    l3=[]
+    for e in l1:
+        if e in l2:
+            l3.append(e)
+    return l3
+
+
+```
+
+l1=[2,4,5,2,7,6]
+l2=[5,8,2,3,2]
+print("A inter B ", intersection(l1,l2))
 :class: tip, dropdown
 
 ```python
