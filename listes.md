@@ -203,7 +203,20 @@ Si cette valeur maximale est présente plusieurs fois dans la liste, on retourne
 
 ```
 
-Code
+def argmax(l):
+    k, m= 0, l[0]
+    for i,e in enumerate(l[1:]):
+        if e>m:
+            k,m=i, e
+           
+    return k+1,m # k indice du plus grand, m plus grand
+       
+       
+       
+l= [3,8,12,4,15,-1]
+k0,m0= argmax(l)
+print("PG ",m0, "----->", k0)
+argmax(l)
 
 
 ```
